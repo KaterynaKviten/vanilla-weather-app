@@ -15,28 +15,35 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <h1>Kyiv</h1>
-        <ul>
-          <li>Friday</li>
-          <li>05:00</li>
-          <li>Clear</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://cdn.icon-icons.com/icons2/2179/PNG/512/summer_vacation_sun_sunlight_summer_heat_hot_icon_133429.png"
-              alt="sun"
-              width="50px"
-            />
-            20°C | °F
-          </div>
-          <div col-6>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="overview">
+            <h1>Kyiv</h1>
             <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity: 37 %</li>
-              <li>Wind: 3 meter/sec</li>
+              <li>Friday</li>
+              <li>05:00</li>
+              <li>Clear</li>
             </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="imigefix">
+                <img
+                  src="https://cdn.icon-icons.com/icons2/2179/PNG/512/summer_vacation_sun_sunlight_summer_heat_hot_icon_133429.png"
+                  alt="sun"
+                  width="50px"
+                  class="float-left"
+                />
+                <div class="float-left"><strong> 20° </strong>C | °F</div>
+              </div>
+            </div>
+            <div col-6>
+              <ul>
+                <li>Precipitation: 0%</li>
+                <li>Humidity: 37 %</li>
+                <li>Wind: 3 meter/sec</li>
+              </ul>
+            </div>
           </div>
         </div>
         <small>
