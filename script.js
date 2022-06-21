@@ -39,11 +39,11 @@ function displayTemperature(response) {
   let iconElement = document.querySelector("#weather-icon");
   iconElement.setAttribute(
     "src",
-    "http://openweathermap.org/img/wn/10d@2x.png"
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
 let apiKey = "4826c8e04d4686528238e637fd752385";
-let city = "Kyiv";
+let city = "rome";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemperature);

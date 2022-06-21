@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  color: #878787;
+  color: #473d5a;
   font-size: 24px;
   font-weight: 100;
   line-height: 29px;
@@ -14,18 +14,19 @@ ul {
 }
 li {
   list-style: none;
-  color: rgb(135, 135, 135);
+  color: rgb(97, 95, 95);
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
 }
-li:first.letter {
+#weather-description::first-letter {
   text-transform: capitalize;
 }
 .weather-app {
   padding: 20px;
-  border: 1px solid rgb(162, 162, 162);
+  border: 1px solid rgb(125, 123, 123);
   border-radius: 7px;
+  background-color: rgb(208, 197, 247);
 }
 .weather-app-wrapper {
   max-width: 600px;
@@ -49,4 +50,12 @@ li:first.letter {
   position: relative;
   font-size: 16px;
   top: -30px;
+}
+#open-source-code-link {
+  font-family: monospace;
+  color: darkslategray;
+}
+#link-code {
+  text-decoration: none;
+  color: darkslategray;
 }
