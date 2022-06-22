@@ -43,7 +43,17 @@ function displayTemperature(response) {
   );
 }
 
-let apiKey = "4826c8e04d4686528238e637fd752385";
-let city = "kyiv";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+  let apiKey = "4826c8e04d4686528238e637fd752385";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function searchByClick(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchByClick);
