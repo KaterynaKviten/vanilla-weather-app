@@ -16,6 +16,7 @@ function formatDate() {
 }
 
 function displayTemperature(response) {
+  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#city");
@@ -60,6 +61,8 @@ function searchByClick(event) {
 function displayFahrenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
@@ -67,6 +70,8 @@ function displayFahrenheitTemp(event) {
 function displayCelsiusTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
 
