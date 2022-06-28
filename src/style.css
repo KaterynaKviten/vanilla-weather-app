@@ -1,5 +1,5 @@
 body {
-  font-family: "Old Standard TT", serif;
+  font-family: "Cabin Sketch", cursive;
 }
 
 h1 {
@@ -7,6 +7,7 @@ h1 {
   font-size: 34px;
   font-weight: 100;
   line-height: 29px;
+  font-family: "Fredericka the Great", cursive;
 }
 ul {
   margin: 0;
@@ -14,10 +15,13 @@ ul {
 }
 li {
   list-style: none;
-  color: rgb(59, 56, 56);
+  color: rgb(37, 36, 36);
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
+}
+#temperature {
+  font-family: "Fredericka the Great", cursive;
 }
 #weather-description::first-letter {
   text-transform: capitalize;
@@ -26,7 +30,7 @@ li {
   padding: 20px;
   border: 1px solid rgb(125, 123, 123);
   border-radius: 7px;
-  background-color: rgba(190, 176, 240, 0.731);
+  background-color: rgb(194, 227, 224);
 }
 .weather-app-wrapper {
   max-width: 600px;
@@ -41,7 +45,7 @@ li {
   width: 64px;
 }
 .imigefix strong {
-  color: rgb(33, 33, 33);
+  color: rgb(37, 36, 36);
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
@@ -60,28 +64,39 @@ li {
   color: darkslategray;
 }
 .imigefix .active {
-  color: rgb(33, 33, 33);
+  color: rgb(37, 36, 36);
   cursor: pointer;
 }
 .imigefix .active:hover {
-  color: rgb(33, 33, 33);
+  color: rgb(37, 36, 36);
   text-decoration: none;
 }
 #submit-button {
   background-color: rgb(20, 147, 58);
   border: none;
+  font-family: "Fredericka the Great", cursive;
 }
 #submit-button:hover {
   background-color: rgb(82, 135, 210);
   border: none;
 }
 .weather-forecast {
-  margin-top: 15px;
-  color: rgb(59, 56, 56);
+  margin-top: 30px;
+  color: rgb(37, 36, 36);
   text-align: center;
   margin-left: 15px;
+  font-size: 12px;
 }
 #img-weather-forecast {
   margin-bottom: 10px;
   margin-top: -4px;
+  width: 50px;
+}
+.col-2 {
+  max-width: none;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.weather-forecast-tempreature-min {
+  color: rgb(109, 109, 109);
 }
