@@ -15,6 +15,36 @@ function formatDate() {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let daysForecast = ["Thu", "Fri", "Sun"];
+  daysForecast.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="row">
+              <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                <img
+                  id="img-weather-forecast"
+                  src="icons/02d.png"
+                  alt="sun"
+                  width="50"
+                />
+                <div class="weather-forecast-tempreatures">
+                  <span class="weather-forecast-tempreature-max">34°</span>
+                  <span class="weather-forecast-tempreature-min">19°</span>
+                </div>
+              </div>
+              </div>
+              `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
@@ -87,3 +117,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("Kyiv");
+displayForecast();
