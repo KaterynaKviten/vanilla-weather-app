@@ -94,7 +94,7 @@ li {
   height: 50%;
 }
 .col-2 {
-  max-width: none;
+  max-width: max-content;
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -103,4 +103,8 @@ li {
 }
 .weather-forecast-tempreatures {
   margin: auto;
+}
+#forecast {
+  display: flex;
+  flex-wrap: wrap;
 }
