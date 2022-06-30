@@ -95,8 +95,8 @@ li {
 }
 .col-2 {
   max-width: max-content;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 5px;
+  margin-right: 8px;
 }
 .weather-forecast-tempreature-min {
   color: rgb(109, 109, 109);

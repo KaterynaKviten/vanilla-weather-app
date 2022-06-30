@@ -33,8 +33,7 @@ function displayForecast(response) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
-        `
-            <div class="row">
+        `     
               <div class="col-2">
                 <div class="weather-forecast-date">${formatDay(
                   forecastDay.dt
@@ -53,7 +52,6 @@ function displayForecast(response) {
                     forecastDay.temp.min
                   )}°</span>
                 </div>
-              </div>
               </div>
               `;
     }
