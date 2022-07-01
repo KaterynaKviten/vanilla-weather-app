@@ -23,6 +23,8 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
+  console.log(response);
+
   let forecast = response.data.daily;
 
   let forecastElement = document.querySelector("#forecast");
@@ -58,6 +60,13 @@ function displayForecast(response) {
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+
+  let uvi = Math.round(response.data.current.uvi);
+  let uvElement = document.querySelector("#uv");
+  if (uvi <= 2) uvElement.innerHTML = `${uvi} (Low)`;
+  else if (uvi < 6) uvElement.innerHTML = `${uvi} (Moderate)`;
+  else if (uvi < 8) uvElement.innerHTML = `${uvi} (High)`;
+  else uvElement.innerHTML = `${uvi} (Very high)`;
 }
 
 function getForecast(coordinates) {
@@ -67,6 +76,7 @@ function getForecast(coordinates) {
 }
 
 function displayTemperature(response) {
+  console.log(response);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#city");
