@@ -23,8 +23,6 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response);
-
   let forecast = response.data.daily;
 
   let forecastElement = document.querySelector("#forecast");
@@ -95,6 +93,16 @@ function displayTemperature(response) {
 
   let dataElement = document.querySelector("#date");
   dataElement.innerHTML = formatDate();
+
+  // let countryElement = document.querySelector("#country");
+  // countryElement.innerHTML = response.data.sys.country;
+
+  let iconCountryElement = document.querySelector("#flag-icon");
+  iconCountryElement.setAttribute(
+    "src",
+
+    `country/${response.data.sys.country}.png`
+  );
 
   celsiusTemp = response.data.main.temp;
 
