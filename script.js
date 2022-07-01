@@ -94,9 +94,6 @@ function displayTemperature(response) {
   let dataElement = document.querySelector("#date");
   dataElement.innerHTML = formatDate();
 
-  // let countryElement = document.querySelector("#country");
-  // countryElement.innerHTML = response.data.sys.country;
-
   let iconCountryElement = document.querySelector("#flag-icon");
   iconCountryElement.setAttribute(
     "src",
