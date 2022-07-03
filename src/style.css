@@ -1,5 +1,5 @@
 body {
-  font-family: "Patrick Hand", cursive;
+  font-family: monospace;
 }
 
 #city {
@@ -7,17 +7,17 @@ body {
   font-size: 34px;
   font-weight: 100;
   line-height: 29px;
+  margin: 10px;
   font-family: "Fredericka the Great", cursive;
 }
 ul {
-  margin: 0;
+  margin: 10px;
   padding: 0;
 }
 li {
   list-style: none;
-  color: rgb(37, 36, 36);
-  font-size: 16px;
-  font-weight: 100;
+  color: #473d5a;
+  font-size: 14px;
   line-height: 19px;
 }
 #temperature {
@@ -108,9 +108,14 @@ li {
   display: flex;
   flex-wrap: wrap;
 }
-/* .overview,
-#country {
-  position: relative;
-  top: -5px;
-  right: -9px;
-} */
+.search-dropdown-menu li {
+  cursor: pointer;
+  display: inline;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.search-dropdown-menu li:hover {
+  color: rgb(82, 135, 210);
+}
